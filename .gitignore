@@ -1,6 +1,6 @@
 __pycache__
 .vscode
-out/
+out/*
 tmp*
 old*
 Untitled*
