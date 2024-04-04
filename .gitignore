@@ -1,0 +1,7 @@
+__pycache__
+.vscode
+out/
+tmp*
+old*
+Untitled*
+.ipynb_checkpoints
