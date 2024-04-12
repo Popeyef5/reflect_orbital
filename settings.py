@@ -16,14 +16,14 @@ FARM_AREA_LOSSES = True # consider losses due to the beam area being larger than
 # Data
 EXCLUDE_COUNTRIES = ["CHN", "China"] # no farms from the countries in this list 
 INCLUDE_FARM_STATUS = "operating", "construction", "pre-construction", "announced" # choose all that apply
-DROPOUTS = 1-1, 1-4/5, 1-3/5, 1-2/5, 1-1/5, 1-1/10 # each farm is a client with P=1-DROPOUT
+DROPOUTS = 1-1, 1-4/5, 1-3/5, 1-2/5, 1-1/5, 1-1/10, 1-1/20, 1-1/100 # each farm is a client with P=1-DROPOUT
 
 farm_status_encode = {
   "operating": 1 << 0,
   "construction": 1 << 1,
   "pre-construction": 1 << 2,
   "announced": 1 << 3
-}
+} # only important that the number is increasing in terms of time horizon (e.g. construction < announced)
 
 # Storage
 USE_PRECOMPUTED_FARMS = int(os.environ.get("USE_PRECOMPUTED_FARMS", 1))
@@ -63,14 +63,17 @@ SOLAR_INVERTER_LOSSES = 0.085 # ChatGPT and https://www.pv-magazine.com/2023/03/
 
 # Space industry
 #KG_COST_TO_ORBIT = 2800 # Falcon 9
-KG_COST_TO_ORBIT = 1500 # Falcon Heavy
+#KG_COST_TO_ORBIT = 1500 # Falcon Heavy
 KG_COST_TO_ORBIT = 200 # Starship
 
 # Reflect
-ENERGY_PRICE = 83e-3
-SUNNY_SKY_FREQ = 0.766
+ENERGY_PRICE = 83e-3 # how much is a kWh worth?
+SOLAR_FARM_REV_SHARE = 0.2 # how much of each kWh sold does each farm keep?
+MIN_FARM_ALLOCATION = 1e6 # how much annual rev would make farms interested?
+SUNNY_SKY_FREQ = 0.766 # what % of the time are the conditions appropriate for solar transfer?
 
 SAT_COST = 40e3
 SAT_WEIGHT = 160
 SAT_LIFE = 20
 SAT_SURFACE = 54**2
+SAT_OPEX = 0

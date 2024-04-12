@@ -1,0 +1,7 @@
+modal==0.61.79
+numpy==1.26.4
+numpy-financial==1.0.0
+openpyxl==3.1.2
+pandas==2.2.1
+safetensors==0.4.2
+tqdm==4.65.0
