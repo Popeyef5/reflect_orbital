@@ -5,3 +5,4 @@ tmp*
 old*
 Untitled*
 .ipynb_checkpoints
+!out/README.md
