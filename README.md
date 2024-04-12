@@ -51,7 +51,7 @@ the downloaded file will weigh ~17GB with default settings. Make sure it ends up
 ## Analisis
 
 ```sh
-python analisis.py
+python analysis.py
 ```
 will generate the figures currently in `media/`. Easy to tune or customize. Importantly, everything was calculated with 0 opex, which is of course a bit unrealistic. Also, with so many parameters, one has to be aware that most figures varying one or two chose a specific value for all others. Figures revolve around some interesting metrics:
 
