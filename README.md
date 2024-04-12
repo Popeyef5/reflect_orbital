@@ -15,7 +15,7 @@ Pretty much everything should be configured in `settings.py`.
 
 ### Fast and easy
 
-Click here to download the result of the simulation with the default parameters (~17GB) and place in the `out/` directory. 
+Click [here](https://drive.google.com/file/d/1uKxBfArj3dqMb1flkqKNwYFkRO3NUJQO/view?usp=sharing) to download the result of the simulation with the default parameters (~17GB) and place in the `out/` directory. 
 
 To tune the parameters and re-run the sim, follow the steps in the next sections.
 
